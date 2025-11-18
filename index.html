@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Comic-Restaurant</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    
+    <header class="top-header">
+        <div class="branding">
+            <h1>Comic Restaurant</h1>
+            <p>Delicious food delivered to your door</p>
+        </div>
+        <nav class="top-nav">
+            <div class="dropdown">
+                <button class="tab-btn active" data-tab="menu">Menu</button>
+                <div class="submenu">
+                    <button class="sub-tab-btn" data-tab="veg">Veg</button>
+                    <button class="sub-tab-btn" data-tab="non-veg">Non-Veg</button>
+                 </div>
+            </div>    
+            <button class="tab-btn" data-tab="specials">Specials</button>
+            <div class="dropdown">
+                <button class="tab-btn">Categories ▾</button>
+                <div class="submenu">
+                    <button class="sub-tab-btn" data-tab="starters">Starters</button>
+                    <button class="sub-tab-btn" data-tab="main">Main Course</button>
+                    <button class="sub-tab-btn" data-tab="desserts">Desserts</button>
+                    <button class="sub-tab-btn" data-tab="drinks">Drinks</button>
+                </div>
+            </div>
+            <button class="tab-btn" data-tab="order">Order Online</button>
+            <button class="tab-btn" data-tab="contact">Contact</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section id="menu" class="tab-content active">
+            <h2>Our Menu</h2>
+            <p>Welcome to Mahawa Restaurant, where flavor meets tradition. Our menu is a curated blend of vibrant vegetarian and non-vegetarian dishes, crafted with fresh ingredients and bold spices. Whether you're craving classic Indian starters, sizzling rolls, or hearty rice bowls, we've got something to satisfy every palate. Explore our Veg and Non-Veg selections below and treat yourself to a culinary experience that’s both comforting and unforgettable.</p>
+            <div class="menu-tabs">
+                <button onclick="openTabAndScroll('veg', '.card')">Go to Veg Section</button>
+                <button onclick="openTabAndScroll('non-veg', '.card')">Go to Non-Veg Section</button>
+            </div>
+        </section>
+        <section id="veg" class="tab-content">
+            <h3>Veg Starters</h3>
+
+            <div class="card">
+                <h3>Paneer Tikka Roll</h3>
+                <p>Grilled paneer wrapped in soft roti – ₹80</p>
+                <button class="order-btn" data-item="Paneer Tikka Roll" data-price="80">Add to Cart</button>
+                <input type="number" class="qty-input" min="1" value="1" style="width: 25px; padding: 10px;">
+            </div>
+            <div class="card">
+                <h3>Veg Roll</h3>
+                <p>Mixed veggies in a classic wrap – ₹60</p>
+                <button class="order-btn" data-item="Veg Roll" data-price="60">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Mushroom Tikka Roll</h3>
+                <p>Spiced mushrooms in a roll – ₹80</p>
+                <button class="order-btn" data-item="Mushroom Tikka Roll" data-price="80">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Paneer Tikka</h3>
+                <p>Chargrilled paneer cubes – ₹100</p>
+                <button class="order-btn" data-item="Paneer Tikka" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Mushroom Tikka</h3>
+                <p>Smoky mushroom skewers – ₹100</p>
+                <button class="order-btn" data-item="Mushroom Tikka" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Veg Noodle</h3>
+                <p>Stir-fried noodles with vegetables – ₹80</p>
+                <button class="order-btn" data-item="Veg Noodle" data-price="80">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Paneer Noodle</h3>
+                <p>Noodles tossed with paneer – ₹100</p>
+                <button class="order-btn" data-item="Paneer Noodle" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Mix Veg Schezwan Noodle</h3>
+                <p>Spicy noodles with mixed veggies – ₹100</p>
+                <button class="order-btn" data-item="Mix Veg Schezwan Noodle" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Veg Fried Rice</h3>
+                <p>Classic fried rice with vegetables – ₹80</p>
+                <button class="order-btn" data-item="Veg Fried Rice" data-price="80">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Paneer Fried Rice</h3>
+                <p>Fried rice with paneer chunks – ₹100</p>
+                <button class="order-btn" data-item="Paneer Fried Rice" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Mix Veg Schezwan Rice</h3>
+                <p>Spicy rice with mixed vegetables – ₹100</p>
+                <button class="order-btn" data-item="Mix Veg Schezwan Rice" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Mushroom 65</h3>
+                <p>Crispy spiced mushroom bites – ₹100</p>
+                <button class="order-btn" data-item="Mushroom 65" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Mushroom Chilly</h3>
+                <p>Hot and tangy mushroom stir-fry – ₹100</p>
+                <button class="order-btn" data-item="Mushroom Chilly" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Mushroom Chilly Patti</h3>
+                <p>Spicy mushroom with crispy coating – ₹100</p>
+                <button class="order-btn" data-item="Mushroom Chilly Patti" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Mushroom Manchurian</h3>
+                <p>Classic Indo-Chinese mushroom dish – ₹100</p>
+                <button class="order-btn" data-item="Mushroom Manchurian" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Mushroom Manchurian Patti</h3>
+                <p>Crispy mushroom Manchurian – ₹100</p>
+                <button class="order-btn" data-item="Mushroom Manchurian Patti" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Veg 65</h3>
+                <p>Deep-fried spicy veg bites – ₹80</p>
+                <button class="order-btn" data-item="Veg 65" data-price="80">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chilly Paneer</h3>
+                <p>Paneer tossed in spicy sauce – ₹100</p>
+                <button class="order-btn" data-item="Chilly Paneer" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Paneer Chilly Patti</h3>
+                <p>Crispy paneer in chili sauce – ₹100</p>
+                <button class="order-btn" data-item="Paneer Chilly Patti" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Paneer Manchurian</h3>
+                <p>Paneer in tangy Manchurian sauce – ₹100</p>
+                <button class="order-btn" data-item="Paneer Manchurian" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Paneer Manchurian Patti</h3>
+                <p>Crispy paneer Manchurian – ₹100</p>
+                <button class="order-btn" data-item="Paneer Manchurian Patti" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Veg Manchurian</h3>
+                <p>Vegetable balls in Manchurian sauce – ₹80</p>
+                <button class="order-btn" data-item="Veg Manchurian" data-price="80">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Veg Manchurian Patti</h3>
+                <p>Crispy veg Manchurian – ₹80</p>
+                <button class="order-btn" data-item="Veg Manchurian Patti" data-price="80">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Veg Clear Soup</h3>
+                <p>Light and healthy vegetable broth – ₹50</p>
+                <button class="order-btn" data-item="Veg Clear Soup" data-price="50">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Veg Hot & Sour Soup</h3>
+                <p>Spicy and tangy veg soup – ₹50</p>
+                <button class="order-btn" data-item="Veg Hot & Sour Soup" data-price="50">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Veg Manchow Soup</h3>
+                <p>Thick soup with crispy noodles – ₹50</p>
+                <button class="order-btn" data-item="Veg Manchow Soup" data-price="50">Add to Cart</button>
+            </div>
+        </section>
+        
+        <section id="non-veg" class="tab-content">
+            <h3>Non-Veg Starters</h3>
+
+           <div class="card">
+                <h3>Chicken Tikka Roll</h3>
+                <p>Chicken tikka wrapped in roti – ₹80</p>
+                <button class="order-btn" data-item="Chicken Tikka Roll" data-price="80">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Egg Roll</h3>
+                <p>Classic egg roll – ₹60</p>
+                <button class="order-btn" data-item="Egg Roll" data-price="60">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Egg Chicken Roll</h3>
+                <p>Egg and chicken combo roll – ₹80</p>
+                <button class="order-btn" data-item="Egg Chicken Roll" data-price="80">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Roll</h3>
+                <p>Spiced chicken roll – ₹80</p>
+                <button class="order-btn" data-item="Chicken Roll" data-price="80">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Tikka</h3>
+                <p>Grilled chicken chunks – ₹100</p>
+                <button class="order-btn" data-item="Chicken Tikka" data-price="100">Add to Cart</button>
+             </div>
+            <div class="card">
+                <h3>Chicken Malai Tikka</h3>
+                <p>Creamy marinated chicken – ₹100</p>
+                <button class="order-btn" data-item="Chicken Malai Tikka" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Hariyali Tikka</h3>
+                <p>Green herb chicken tikka – ₹100</p>
+                <button class="order-btn" data-item="Chicken Hariyali Tikka" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Seekh Kebab</h3>
+                <p>Minced chicken skewers – ₹100</p>
+                <button class="order-btn" data-item="Chicken Seekh Kebab" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Tangdi Kebab</h3>
+                <p>Spicy chicken drumsticks – ₹100</p>
+                <button class="order-btn" data-item="Chicken Tangdi Kebab" data-price="100">Add to Cart</button>
+            </div>
+           <div class="card">
+                <h3>Chicken Tandoori (Half/Full)</h3>
+                <p>Choose your portion – ₹120 / ₹200</p>
+                <div class="dropdown">
+                    <button class="order-btn">Add to Cart ▾</button>
+                    <div class="submenu">
+                        <button class="sub-tab-btn" data-item="Chicken Tandoori (Half)" data-price="120">Half – ₹120</button>
+                        <button class="sub-tab-btn" data-item="Chicken Tandoori (Full)" data-price="200">Full – ₹200</button>
+                    </div>
+                </div>
+            </div>
+             <div class="card">
+                <h3>Egg Noodle</h3>
+                <p>Veg noodles with scrambled egg – ₹90</p>
+                <button class="order-btn" data-item="Egg Noodle" data-price="90">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Noodle</h3>
+                <p>Stir-fried noodles with chicken – ₹100</p>
+                <button class="order-btn" data-item="Chicken Noodle" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Schezwan Noodle</h3>
+                <p>Spicy chicken noodles – ₹120</p>
+                <button class="order-btn" data-item="Chicken Schezwan Noodle" data-price="120">Add to Cart</button>
+            </div>
+             <div class="card">
+                <h3>Egg Fried Rice</h3>
+                <p>Fried rice with egg – ₹90</p>
+                <button class="order-btn" data-item="Egg Fried Rice" data-price="90">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Fried Rice</h3>
+                <p>Classic fried rice with chicken – ₹100</p>
+                <button class="order-btn" data-item="Chicken Fried Rice" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Schezwan Fried Rice</h3>
+                <p>Spicy Schezwan-style chicken rice – ₹120</p>
+                <button class="order-btn" data-item="Chicken Schezwan Fried Rice" data-price="120">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Manchurian</h3>
+                <p>Chicken in tangy Manchurian sauce – ₹100</p>
+                <button class="order-btn" data-item="Chicken Manchurian" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chilly Chicken</h3>
+                <p>Chicken tossed in spicy chili sauce – ₹100</p>
+                <button class="order-btn" data-item="Chilly Chicken" data-price="100">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Clear Soup</h3>
+                <p>Light chicken broth – ₹50</p>
+                <button class="order-btn" data-item="Chicken Clear Soup" data-price="50">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Hot & Sour Soup</h3>
+                <p>Spicy and tangy chicken soup – ₹50</p>
+                <button class="order-btn" data-item="Chicken Hot & Sour Soup" data-price="50">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Chicken Manchow Soup</h3>
+                <p>Thick soup with crispy noodles – ₹50</p>
+                <button class="order-btn" data-item="Chicken Manchow Soup" data-price="50">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="specials" class="tab-content">
+            <h2>Today's Specials</h2>
+
+            <div class="card">
+                <h3>Mahawa Thali</h3>
+                <p>A complete meal with rice, roti, curry, and dessert.</p>
+                <button class="order-btn" data-item="Mahawa Thali" data-price="180">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Mutton Rogan Josh</h3>
+                <p>Slow-cooked Kashmiri-style mutton in aromatic gravy – ₹220</p>
+                <button class="order-btn" data-item="Mutton Rogan Josh" data-price="220">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Chicken Dum Biryani</h3>
+                <p>Fragrant basmati rice layered with marinated chicken – ₹180</p>
+                <button class="order-btn" data-item="Chicken Dum Biryani" data-price="180">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Fish Curry & Rice</h3>
+                <p>Fresh river fish simmered in spicy mustard gravy – ₹160</p>
+                <button class="order-btn" data-item="Fish Curry & Rice" data-price="160">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Paneer Butter Masala</h3>
+                <p>Soft paneer cubes in creamy tomato gravy – ₹140</p>
+                <button class="order-btn" data-item="Paneer Butter Masala" data-price="140">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Gulab Jamun (2 pcs)</h3>
+                <p>Warm, syrup-soaked dessert balls – ₹40</p>
+                <button class="order-btn" data-item="Gulab Jamun" data-price="40">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="starters" class="tab-content">
+            <h2>Starters</h2>
+            <p>Perfect bites to begin your meal. Choose from our sizzling Veg and Non-Veg appetizers, each crafted to awaken your taste buds.</p>
+
+            <div class="card">
+                <h3>Paneer Tikka</h3>
+                <p>Marinated paneer cubes grilled to perfection – ₹100</p>
+                <button class="order-btn" data-item="Paneer Tikka" data-price="100">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Veg Manchurian</h3>
+                <p>Crispy vegetable balls tossed in tangy sauce – ₹90</p>
+                <button class="order-btn" data-item="Veg Manchurian" data-price="90">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Chicken Pakora</h3>
+                <p>Spiced chicken fritters deep-fried till golden – ₹120</p>
+                <button class="order-btn" data-item="Chicken Pakora" data-price="120">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Mutton Seekh Kebab</h3>
+                <p>Minced mutton skewers grilled with herbs – ₹150</p>
+                <button class="order-btn" data-item="Mutton Seekh Kebab" data-price="150">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Fish Fingers</h3>
+                <p>Crunchy fish strips served with tartar dip – ₹130</p>
+                <button class="order-btn" data-item="Fish Fingers" data-price="130">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="main" class="tab-content">
+            <h2>Main Course</h2>
+            <p>Hearty and flavorful dishes to satisfy your hunger. From creamy gravies to aromatic rice bowls, our mains are crafted to comfort and delight.</p>
+
+            <div class="card">
+                <h3>Paneer Butter Masala</h3>
+                <p>Soft paneer cubes simmered in rich tomato cream gravy – ₹140</p>
+                <button class="order-btn" data-item="Paneer Butter Masala" data-price="140">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Dal Tadka</h3>
+                <p>Yellow lentils tempered with garlic and spices – ₹100</p>
+                <button class="order-btn" data-item="Dal Tadka" data-price="100">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Veg Pulao</h3>
+                <p>Fragrant rice cooked with seasonal vegetables and spices – ₹110</p>
+                <button class="order-btn" data-item="Veg Pulao" data-price="110">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Chicken Curry</h3>
+                <p>Classic homestyle chicken in spicy onion-tomato gravy – ₹160</p>
+                <button class="order-btn" data-item="Chicken Curry" data-price="160">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Mutton Kasa</h3>
+                <p>Odisha-style slow-cooked mutton in rich masala – ₹200</p>
+                <button class="order-btn" data-item="Mutton Kasa" data-price="200">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Jeera Rice</h3>
+                <p>Simple and aromatic cumin-flavored rice – ₹80</p>
+                <button class="order-btn" data-item="Jeera Rice" data-price="80">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Butter Naan (2 pcs)</h3>
+                <p>Soft tandoori bread brushed with butter – ₹50</p>
+                <button class="order-btn" data-item="Butter Naan" data-price="50">Add to Cart</button>
+            </div>
+        </section>
+
+
+        <section id="desserts" class="tab-content">
+            <h2>Desserts</h2>
+            <p>Sweet endings to your delicious journey. Indulge in our handcrafted desserts that bring comfort and delight with every bite.</p>
+
+            <div class="card">
+                <h3>Gulab Jamun (2 pcs)</h3>
+                <p>Warm, syrup-soaked dumplings made from khoya – ₹40</p>
+                <button class="order-btn" data-item="Gulab Jamun" data-price="40">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Rasgulla (2 pcs)</h3>
+                <p>Soft and spongy cottage cheese balls in light sugar syrup – ₹40</p>
+                <button class="order-btn" data-item="Rasgulla" data-price="40">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Kheer</h3>
+                <p>Traditional rice pudding slow-cooked with milk and cardamom – ₹50</p>
+                <button class="order-btn" data-item="Kheer" data-price="50">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Ice Cream Scoop</h3>
+                <p>Choose from vanilla, chocolate, or butterscotch – ₹30</p>
+                <button class="order-btn" data-item="Ice Cream Scoop" data-price="30">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Chhena Poda</h3>
+                <p>Odisha’s iconic baked cheese dessert with caramelized edges – ₹60</p>
+                <button class="order-btn" data-item="Chhena Poda" data-price="60">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="drinks" class="tab-content">
+            <h2>Drinks</h2>
+            <p>Refreshing beverages to complement your meal. From classic coolers to energizing sips, our drink menu is designed to quench every thirst.</p>
+
+            <div class="card">
+                <h3>Masala Lemonade</h3>
+                <p>Fresh lemon juice blended with spices and soda – ₹40</p>
+                <button class="order-btn" data-item="Masala Lemonade" data-price="40">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Cold Coffee</h3>
+                <p>Chilled coffee with milk and a hint of chocolate – ₹60</p>
+                <button class="order-btn" data-item="Cold Coffee" data-price="60">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Sweet Lassi</h3>
+                <p>Traditional Punjabi-style yogurt drink, sweetened and chilled – ₹50</p>
+                <button class="order-btn" data-item="Sweet Lassi" data-price="50">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Buttermilk</h3>
+                <p>Light and refreshing spiced chaas – ₹30</p>
+                <button class="order-btn" data-item="Buttermilk" data-price="30">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <h3>Mineral Water (500ml)</h3>
+                <p>Packaged drinking water – ₹20</p>
+                <button class="order-btn" data-item="Mineral Water (500ml)" data-price="20">Add to Cart</button>
+            </div>
+        </section>
+
+        
+        <section id="order" class="tab-content">
+            <h2>Order Online</h2>
+            <p>Select your favorite dishes and place your order easily.</p>
+
+            <div class="order-layout">
+                <div id="cart">
+                    <h3>Your Cart</h3>
+                    <ul id="cart-items"></ul>
+                    <p id="cart-total">Total: ₹0</p>
+                </div>
+
+                <form id="checkout-form">
+                    <h3>Checkout Details</h3>
+                    <label>Name:</label><br>
+                    <input type="text" id="customer-name" required><br><br>
+
+                    <label>Address:</label><br>
+                    <textarea id="customer-address" rows="3" required></textarea><br><br>
+
+                    <label>Payment Method:</label><br>
+                    <select id="payment-method" required>
+                        <option value="">Select</option>
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Card">Credit/Debit Card</option>
+                    </select><br><br>
+
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="tab-content">
+            <h2>Contact Us</h2>
+            <p>Phone: +91-9876543210</p>
+            <p>Email: order@mahawarestaurant.com</p>
+            <p>Location: Bhubaneshwar, Odisha</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <div id="floating-cart" style="position:fixed; bottom:20px; right:20px; background:#e67e22; color:#fff; padding:10px 15px; border-radius:50px; font-weight:bold; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.3); z-index:999;">
+        🛒<span id="cart-count">0</span>
+    </div>
+
+    <div id="receipt-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000000cc; z-index:9999; justify-content:center; align-items:center;">
+        <div style="background:#fff; color:#000; padding:20px; border-radius:10px; width:300px;">
+            <h3>Order Confirmation</h3>
+            <div id="receipt-content"></div>
+            <button onclick="window.print()" style="margin-top:10px;">🖨️ Print Receipt</button>
+            <button onclick="document.getElementById('receipt-modal').style.display='none'" style="margin-top:10px;">Close</button>
+        </div>
+    </div>
+</body>
+</html>
